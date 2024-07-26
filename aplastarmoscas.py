@@ -119,7 +119,6 @@ def principal():
     golpes = 0
     pg.init()
     pantalla = pg.display.set_mode((1280, 480), pg.SCALED)
-    pg.display.set_caption("Fiebre de la mosca")
     pg.mouse.set_visible(False)
 
     # Crear el fondo
@@ -133,10 +132,7 @@ def principal():
         fuente = pg.font.Font(None, 64)
         texto = fuente.render("Aplasta a la Mosca", True, (10, 10, 10))
         pos_texto = texto.get_rect(centerx=fondo.get_width() / 2, y=10)
-        #texto2 = fuente.render("Cantidad de golpes " + str(golpes), True, (100, 100, 100))
-        #pos_texto2 = texto2.get_rect(centerx=fondo.get_width() / 2, y=50)
         fondo.blit(texto, pos_texto)
-        #fondo.blit(texto2, pos_texto2)
 
     # Mostrar el fondo
     pantalla.blit(fondo, (0, 0))
